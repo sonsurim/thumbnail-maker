@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ReactElement } from 'react'
 
-function App(): ReactElement {
+const App = (): ReactElement => {
   return <div />
 }
 
