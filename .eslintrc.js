@@ -9,7 +9,7 @@ module.exports = {
 	parserOptions: {
 		project: './tsconfig.json'
 	},
-	plugins: ['react', '@typescript-eslint'],
+	plugins: ['react', '@typescript-eslint', 'eslint-plugin-import-helpers'],
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -18,6 +18,19 @@ module.exports = {
 	],
 	ignorePatterns: ['webpack.config.js','**/*.config.js', '.eslintrc.js'],
 	rules: {
+		'import-helpers/order-imports': [
+			'error', {
+				newlinesBetween: 'never',
+				groups: [
+					'absolute',
+					'module',
+					['parent', 'sibling', 'index'],
+					'/^@shared/',
+				],
+				alphabetize: { order: 'asc', ignoreCase: true },
+			},
+		],
+		'react/react-in-jsx-scope': 'off',
 		'react/jsx-pascal-case': ['error'],
 		"react/self-closing-comp": ["error", {
 			"component": true,
