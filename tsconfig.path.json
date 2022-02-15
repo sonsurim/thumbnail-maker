@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["components"],
+      "@hooks": ["hooks"],
+      "@constants": ["data/constants"],
+      "@utils": ["utils"],
+      "@assets": ["assets"],
+      "@atoms": ["components/atoms"],
+      "@molecules": ["components/molecules"],
+      "@organisms": ["components/organisms"],
+      "@templates": ["components/templates"],
+    }
+  }
+}
