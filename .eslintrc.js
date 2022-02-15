@@ -5,14 +5,6 @@ module.exports = {
 		es2021: true,
 		node: true
 	},
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      parserOptions: {
-        project: 'tsconfig.json',
-      }
-    }
-  ],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		project: './tsconfig.json'
@@ -26,9 +18,20 @@ module.exports = {
 	],
 	ignorePatterns: ['webpack.config.js','**/*.config.js', '.eslintrc.js'],
 	rules: {
+		'react/jsx-pascal-case': ['error'],
 		"react/self-closing-comp": ["error", {
 			"component": true,
 			"html": true
-		}]
+		}],
+		'@typescript-eslint/array-type': ['error', { default: 'array' }],
+		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+		'@typescript-eslint/consistent-type-imports': 'error',
+		'@typescript-eslint/explicit-function-return-type': 'error',
+		'@typescript-eslint/member-ordering': 'error',
+		'@typescript-eslint/method-signature-style': ['error', 'method'],
+		'@typescript-eslint/no-confusing-void-expression': 'error',
+		'@typescript-eslint/no-duplicate-imports': 'error',
+		'@typescript-eslint/no-explicit-any': 'off',
+		'@typescript-eslint/type-annotation-spacing': 'error',
 	}
 }
