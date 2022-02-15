@@ -22,6 +22,7 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/recommended',
+    'plugin:prettier/recommended'
 	],
 	ignorePatterns: ['webpack.config.js','**/*.config.js', '.eslintrc.js'],
 }
