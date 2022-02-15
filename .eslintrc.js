@@ -25,4 +25,10 @@ module.exports = {
     'plugin:prettier/recommended'
 	],
 	ignorePatterns: ['webpack.config.js','**/*.config.js', '.eslintrc.js'],
+	rules: {
+		"react/self-closing-comp": ["error", {
+			"component": true,
+			"html": true
+		}]
+	}
 }
